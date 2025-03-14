@@ -27,6 +27,7 @@ const Navbar = () => {
     { name: 'Accueil', href: '/' },
     { name: 'Fonctionnalités', href: '#features' },
     { name: 'Tarifs', href: '#pricing' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 

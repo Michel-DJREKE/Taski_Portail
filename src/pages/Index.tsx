@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
 import Features from '@/components/home/Features';
 import Pricing from '@/components/home/Pricing';
+import FAQ from '@/components/home/FAQ';
+import Contact from '@/components/home/Contact';
 import CallToAction from '@/components/home/CallToAction';
 
 const Index = () => {
@@ -15,6 +17,8 @@ const Index = () => {
         <Hero />
         <Features />
         <Pricing />
+        <FAQ />
+        <Contact />
         <CallToAction />
       </main>
       <Footer />
