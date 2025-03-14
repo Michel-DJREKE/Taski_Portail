@@ -108,15 +108,17 @@ const Pricing = () => {
                 </ul>
               </CardContent>
               <CardFooter className="pt-0 pb-6">
-                <Button 
-                  className={`w-full ${
-                    plan.popular 
-                      ? 'bg-taski-primary hover:bg-taski-primary/90 text-white' 
-                      : 'bg-transparent hover:bg-accent border border-border dark:border-border-dark'
-                  }`}
-                >
-                  {plan.cta}
-                </Button>
+                <Link to="/register" className="w-full">
+                  <Button 
+                    className={`w-full ${
+                      plan.popular 
+                        ? 'bg-taski-primary hover:bg-taski-primary/90 text-white' 
+                        : 'bg-transparent hover:bg-accent border border-border dark:border-border-dark'
+                    }`}
+                  >
+                    {plan.cta}
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

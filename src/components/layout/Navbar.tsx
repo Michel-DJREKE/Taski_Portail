@@ -25,10 +25,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Accueil', href: '/' },
-    { name: 'Fonctionnalités', href: '#features' },
-    { name: 'Tarifs', href: '#pricing' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Fonctionnalités', href: location.pathname === '/' ? '#features' : '/#features' },
+    { name: 'Tarifs', href: '/pricing' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (

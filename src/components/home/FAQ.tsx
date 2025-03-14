@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 import {
   Collapsible,
@@ -77,12 +78,12 @@ const FAQ = () => {
         <div className="text-center mt-10">
           <p className="text-foreground/70 dark:text-foreground-dark/70">
             Vous ne trouvez pas votre réponse ?{' '}
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="text-taski-primary hover:text-taski-primary/80 transition-colors font-medium"
             >
               Contactez notre équipe
-            </a>
+            </Link>
           </p>
         </div>
       </div>
