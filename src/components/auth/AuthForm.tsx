@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { CheckCircle, Eye, EyeOff, Lock, Mail, User } from 'lucide-react';
+import { ArrowRight, CheckCircle, Eye, EyeOff, Lock, Mail, User, Github } from 'lucide-react';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 type AuthFormProps = {
   type: 'login' | 'register' | 'forgot-password';
@@ -42,16 +43,35 @@ const AuthForm = ({ type }: AuthFormProps) => {
         return 'Nous vous enverrons un lien pour réinitialiser votre mot de passe';
     }
   };
+
+  const getMotivationalMessage = () => {
+    switch (type) {
+      case 'login':
+        return 'Reprenez votre productivité en main !';
+      case 'register':
+        return 'Rejoignez une meilleure façon de gérer vos projets !';
+      case 'forgot-password':
+        return 'Ne vous inquiétez pas, récupérez votre accès en un instant !';
+    }
+  };
   
   return (
     <div className="auth-card animate-scale-in">
       <div className="flex flex-col items-center mb-8">
-        <Link to="/" className="flex items-center space-x-2 mb-6">
-          <div className="w-10 h-10 rounded-lg bg-taski-primary flex items-center justify-center text-white font-bold text-xl">T</div>
-          <span className="font-semibold text-xl">TASKI</span>
-        </Link>
+        <div className="flex justify-between items-center w-full mb-4">
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 rounded-lg bg-taski-primary flex items-center justify-center text-white font-bold text-xl">T</div>
+            <span className="font-semibold text-xl">TASKI</span>
+          </Link>
+          <ThemeToggle />
+        </div>
+        
+        <div className="inline-flex items-center px-3 py-1 mb-3 text-xs font-medium bg-taski-primary/10 text-taski-primary rounded-full dark:bg-taski-primary/20">
+          <span className="animate-wave inline-block mr-1.5">👋</span> {getMotivationalMessage()}
+        </div>
+        
         <h1 className="text-2xl font-bold mb-2 text-center">{getTitle()}</h1>
-        <p className="text-foreground/70 text-center">{getDescription()}</p>
+        <p className="text-foreground/70 text-center dark:text-foreground-dark/70">{getDescription()}</p>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -67,10 +87,10 @@ const AuthForm = ({ type }: AuthFormProps) => {
                 placeholder="Entrez votre nom"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="form-input pl-10"
+                className="form-input pl-10 dark:bg-background-dark/30"
                 required
               />
-              <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" />
+              <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40 dark:text-foreground-dark/40" />
             </div>
           </div>
         )}
@@ -86,10 +106,10 @@ const AuthForm = ({ type }: AuthFormProps) => {
               placeholder="Entrez votre email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="form-input pl-10"
+              className="form-input pl-10 dark:bg-background-dark/30"
               required
             />
-            <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" />
+            <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40 dark:text-foreground-dark/40" />
           </div>
         </div>
         
@@ -112,13 +132,13 @@ const AuthForm = ({ type }: AuthFormProps) => {
                 placeholder={type === 'login' ? 'Entrez votre mot de passe' : 'Créez un mot de passe'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="form-input pl-10 pr-10"
+                className="form-input pl-10 pr-10 dark:bg-background-dark/30"
                 required
               />
-              <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" />
+              <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40 dark:text-foreground-dark/40" />
               <button
                 type="button"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/40 hover:text-foreground/60 transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/40 hover:text-foreground/60 transition-colors dark:text-foreground-dark/40 dark:hover:text-foreground-dark/60"
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
               >
@@ -130,10 +150,10 @@ const AuthForm = ({ type }: AuthFormProps) => {
         
         {type === 'register' && (
           <div className="flex items-start space-x-2 mt-4">
-            <div className="bg-muted rounded flex items-center justify-center h-5 w-5 mt-0.5 border-2 border-taski-primary/20">
+            <div className="bg-muted rounded flex items-center justify-center h-5 w-5 mt-0.5 border-2 border-taski-primary/20 dark:bg-muted-dark dark:border-taski-primary/30">
               <CheckCircle size={14} className="text-taski-primary" />
             </div>
-            <p className="text-xs text-foreground/70">
+            <p className="text-xs text-foreground/70 dark:text-foreground-dark/70">
               En créant un compte, vous acceptez nos{' '}
               <a href="#" className="text-taski-primary hover:text-taski-primary/80 transition-colors">
                 Conditions d'utilisation
@@ -149,71 +169,83 @@ const AuthForm = ({ type }: AuthFormProps) => {
         
         <Button 
           type="submit" 
-          className="w-full bg-taski-primary hover:bg-taski-primary/90 text-white button-effect mt-6"
+          className="w-full bg-taski-primary hover:bg-taski-primary/90 text-white button-effect mt-6 group"
         >
           {type === 'login' 
             ? 'Se connecter' 
             : type === 'register' 
               ? "S'inscrire" 
               : 'Envoyer le lien de récupération'}
+          <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
         </Button>
         
         {type !== 'forgot-password' && (
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border"></div>
+              <div className="w-full border-t border-border dark:border-border-dark"></div>
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-white px-2 text-foreground/60">ou</span>
+              <span className="bg-white px-2 text-foreground/60 dark:bg-card-dark dark:text-foreground-dark/60">ou</span>
             </div>
           </div>
         )}
         
         {type !== 'forgot-password' && (
-          <Button 
-            type="button" 
-            variant="outline" 
-            className="w-full button-effect"
-          >
-            <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
-              <path
-                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                fill="#4285F4"
-              />
-              <path
-                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                fill="#34A853"
-              />
-              <path
-                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                fill="#FBBC05"
-              />
-              <path
-                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                fill="#EA4335"
-              />
-            </svg>
-            Continuer avec Google
-          </Button>
+          <div className="space-y-3">
+            <Button 
+              type="button" 
+              variant="outline" 
+              className="w-full button-effect flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4"
+                />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853"
+                />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  fill="#FBBC05"
+                />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335"
+                />
+              </svg>
+              Continuer avec Google
+            </Button>
+            
+            <Button 
+              type="button" 
+              variant="outline" 
+              className="w-full button-effect flex items-center justify-center"
+            >
+              <Github size={18} className="mr-2" />
+              Continuer avec GitHub
+            </Button>
+          </div>
         )}
         
         <div className="text-center mt-6">
           {type === 'login' ? (
-            <p className="text-sm text-foreground/70">
+            <p className="text-sm text-foreground/70 dark:text-foreground-dark/70">
               Vous n'avez pas de compte ?{' '}
               <Link to="/register" className="text-taski-primary hover:text-taski-primary/80 transition-colors font-medium">
                 Créer un compte
               </Link>
             </p>
           ) : type === 'register' ? (
-            <p className="text-sm text-foreground/70">
+            <p className="text-sm text-foreground/70 dark:text-foreground-dark/70">
               Vous avez déjà un compte ?{' '}
               <Link to="/login" className="text-taski-primary hover:text-taski-primary/80 transition-colors font-medium">
                 Se connecter
               </Link>
             </p>
           ) : (
-            <p className="text-sm text-foreground/70">
+            <p className="text-sm text-foreground/70 dark:text-foreground-dark/70">
               <Link to="/login" className="text-taski-primary hover:text-taski-primary/80 transition-colors font-medium">
                 Retour à la connexion
               </Link>

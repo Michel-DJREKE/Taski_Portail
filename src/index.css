@@ -43,6 +43,65 @@
     --sidebar-accent-foreground: 240 6% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217 92% 60%;
+
+    /* Dark mode variables */
+    --background-dark: 240 15% 8%;
+    --foreground-dark: 0 0% 98%;
+
+    --card-dark: 240 10% 12%;
+    --card-dark-foreground: 0 0% 98%;
+
+    --popover-dark: 240 10% 12%;
+    --popover-dark-foreground: 0 0% 98%;
+
+    --primary-dark: 252 90% 60%;
+    --primary-dark-foreground: 0 0% 100%;
+
+    --secondary-dark: 250 70% 65%;
+    --secondary-dark-foreground: 0 0% 100%;
+
+    --muted-dark: 240 8% 18%;
+    --muted-dark-foreground: 240 5% 64%;
+
+    --accent-dark: 252 90% 60%;
+    --accent-dark-foreground: 0 0% 100%;
+
+    --destructive-dark: 0 74% 50%;
+    --destructive-dark-foreground: 0 0% 98%;
+
+    --border-dark: 240 5% 20%;
+    --input-dark: 240 5% 20%;
+    --ring-dark: 252 90% 55%;
+  }
+
+  .dark {
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+
+    --card: var(--card-dark);
+    --card-foreground: var(--card-dark-foreground);
+
+    --popover: var(--popover-dark);
+    --popover-foreground: var(--popover-dark-foreground);
+
+    --primary: var(--primary-dark);
+    --primary-foreground: var(--primary-dark-foreground);
+
+    --secondary: var(--secondary-dark);
+    --secondary-foreground: var(--secondary-dark-foreground);
+
+    --muted: var(--muted-dark);
+    --muted-foreground: var(--muted-dark-foreground);
+
+    --accent: var(--accent-dark);
+    --accent-foreground: var(--accent-dark-foreground);
+
+    --destructive: var(--destructive-dark);
+    --destructive-foreground: var(--destructive-dark-foreground);
+
+    --border: var(--border-dark);
+    --input: var(--input-dark);
+    --ring: var(--ring-dark);
   }
 
   * {
@@ -62,15 +121,15 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-glass rounded-2xl;
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-glass rounded-2xl dark:bg-black/30 dark:border-white/10 dark:shadow-dark-glass;
   }
   
   .hero-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-elevation rounded-2xl transition-all duration-300 hover:shadow-glass hover:bg-white/90;
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-elevation rounded-2xl transition-all duration-300 hover:shadow-glass hover:bg-white/90 dark:bg-black/30 dark:border-white/10 dark:shadow-dark-elevation dark:hover:shadow-dark-glass dark:hover:bg-black/40;
   }
   
   .feature-card {
-    @apply bg-white rounded-2xl p-6 shadow-subtle transition-all duration-300 hover:shadow-elevation;
+    @apply bg-white rounded-2xl p-6 shadow-subtle transition-all duration-300 hover:shadow-elevation dark:bg-card-dark dark:shadow-dark-subtle dark:hover:shadow-dark-elevation;
   }
   
   .button-effect {
@@ -78,15 +137,23 @@
   }
   
   .link-effect {
-    @apply relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-taski-primary after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-taski-primary after:transition-all after:duration-300 hover:after:w-full dark:after:bg-taski-primary;
   }
   
   .form-input {
-    @apply w-full px-4 py-3 rounded-lg border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-taski-primary/20 focus:border-taski-primary transition-all duration-300;
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-taski-primary/20 focus:border-taski-primary transition-all duration-300 dark:bg-background-dark/50 dark:border-border-dark dark:focus:ring-taski-primary/30 dark:focus:border-taski-primary;
   }
   
   .auth-card {
-    @apply w-full max-w-md p-8 rounded-2xl bg-white shadow-subtle;
+    @apply w-full max-w-md p-8 rounded-2xl bg-white shadow-subtle dark:bg-card-dark dark:shadow-dark-subtle;
+  }
+
+  .taski-bubble {
+    @apply absolute rounded-full bg-gradient-to-r from-taski-primary/20 to-taski-secondary/20 dark:from-taski-primary/10 dark:to-taski-secondary/10;
+  }
+
+  .theme-toggle {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-accent dark:border-border-dark dark:bg-background-dark dark:hover:bg-accent-dark;
   }
 }
 
@@ -97,5 +164,9 @@
   
   .text-gradient {
     @apply bg-gradient-to-r from-taski-primary to-taski-secondary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-dark {
+    @apply bg-gradient-to-r from-taski-primary/90 to-taski-secondary/90 bg-clip-text text-transparent;
   }
 }
