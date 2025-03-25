@@ -95,16 +95,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				taski: {
-					primary: '#625BF7',
-					secondary: '#8A84FF',
-					accent: '#625BF7',
+					primary: '#10B981',
+					secondary: '#F59E0B',
+					accent: '#FFFF00',
 					light: '#F6F6F9',
 					dark: '#1F1D2B',
 					gray: '#94A3B8',
 					green: '#10B981',
-					blue: '#3B82F6',
+					blue: '#FFFF00',
 					orange: '#F59E0B',
+					yellowBright: '#fdd600',  // Jaune vif
+					orangeLight: '#f9a31a',   // Orange clair
+					greenLight: '#51b749',    // Vert clair
+					greenDark: '#4cb544'      // Vert foncé
 				}
+				
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
