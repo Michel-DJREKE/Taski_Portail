@@ -35,7 +35,7 @@ const Hero = () => {
                   <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto button-effect">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto button-effect hover:bg-taski-secondary">
                 Explorer TASKI
               </Button>
             </div>

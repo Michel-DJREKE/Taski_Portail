@@ -47,8 +47,9 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             aria-label="TASKI accueil"
           >
-            <div className="w-8 h-8 rounded-lg bg-taski-primary flex items-center justify-center text-white font-bold text-xl">T</div>
-            <span className="font-semibold text-xl">TASKI</span>
+            {/* <div className="w-8 h-8 rounded-lg bg-taski-primary flex items-center justify-center text-white font-bold text-xl">T</div>
+            <span className="font-semibold text-xl">TASKI</span> */}
+            <img src="" alt="" />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -69,7 +70,7 @@ const Navbar = () => {
             <ThemeToggle />
             
             <Link to="/login">
-              <Button variant="ghost" className="text-sm font-medium button-effect">
+              <Button variant="ghost" className="text-sm font-medium button-effect hover:bg-taski-secondary">
                 Connexion
               </Button>
             </Link>
@@ -81,8 +82,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu & Theme Toggle Button */}
-          <div className="flex items-center space-x-2 md:hidden">
-            <ThemeToggle />
+          <div className="flex items-center space-x-2 md:hidden ">
+            <ThemeToggle  />
             
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

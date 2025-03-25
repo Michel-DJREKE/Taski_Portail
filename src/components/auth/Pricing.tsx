@@ -104,7 +104,7 @@ const Pricing = () => {
 
   return (
       
-      <div className="taski-container p-24">
+      <div className="taski-container py-4 px-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h1 
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"

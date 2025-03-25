@@ -28,7 +28,7 @@ const CallToAction = () => {
                 <ArrowRight size={16} className="ml-2" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto button-effect">
+            <Button size="lg" variant="outline" className="border-white/30 text-black dark:text-white hover:bg-taski-secondary hover:text-white w-full sm:w-auto button-effect">
               Contacter les ventes
             </Button>
           </div>

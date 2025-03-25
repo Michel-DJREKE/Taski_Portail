@@ -47,7 +47,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme} 
       variant="ghost" 
       size="icon"
-      className="theme-toggle"
+      className=" hover:bg-taski-secondary"
       aria-label={isDarkMode ? "Passer en mode clair" : "Passer en mode sombre"}
     >
       {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}

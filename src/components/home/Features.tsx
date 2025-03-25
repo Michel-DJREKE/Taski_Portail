@@ -37,7 +37,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-taski-light">
+    <section id="features" className="py-20 bg-taski-light dark:bg-taski-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
@@ -73,7 +73,7 @@ const Features = () => {
         </div>
 
         {/* Feature Highlight */}
-        <div className="mt-24 bg-white rounded-2xl shadow-elevation overflow-hidden">
+        <div className="mt-24 bg-white rounded-2xl shadow-elevation overflow-hidden dark:bg-taski-dark">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12 flex flex-col justify-center">
               <div className="inline-flex items-center px-3 py-1 mb-6 text-xs font-medium bg-taski-primary/10 text-taski-primary rounded-full">
@@ -101,7 +101,7 @@ const Features = () => {
               </ul>
             </div>
             <div className="bg-taski-primary/5 p-8 flex items-center justify-center">
-              <div className="bg-white p-6 rounded-xl shadow-subtle w-full max-w-md">
+              <div className="bg-white dark:bg-taski-dark p-6 rounded-xl shadow-subtle w-full max-w-md">
                 <div className="flex justify-between items-center mb-6">
                   <h4 className="font-semibold">Performance de l'équipe</h4>
                   <div className="text-sm text-foreground/60">

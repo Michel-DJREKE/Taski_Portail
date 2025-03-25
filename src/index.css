@@ -160,18 +160,17 @@
   }
 
   .pricing-card-popular {
-    @apply pricing-card relative bg-gradient-to-b from-taski-secondary to-taski-light dark:from-taski-secondary/30 dark:to-taski-dark border-taski-secondary dark:border-taski-primary shadow-xl;
+    @apply pricing-card relative bg-gradient-to-b from-orange-200 to-taski-light dark:from-taski-secondary/30 dark:to-taski-dark border-taski-secondary dark:border-taski-primary shadow-xl;
   }
-  
+
   .pricing-card-popular::before {
-    content: '';
+    content: "";
     @apply absolute inset-0 bg-gradient-to-r from-taski-orangeLight/20 to-taski-yellowBright/20 dark:from-taski-greenDark/20 dark:to-taski-green/20 rounded-3xl -z-10 blur-xl opacity-70;
   }
-  
+
   .pricing-badge {
     @apply absolute -top-3 right-8 px-4 py-1 bg-taski-primary text-white text-sm font-medium rounded-full shadow-lg;
   }
-  
 }
 
 @layer utilities {
@@ -186,6 +185,4 @@
   .text-gradient-dark {
     @apply bg-gradient-to-r from-taski-primary/90 to-taski-secondary/90 bg-clip-text text-transparent;
   }
-
-  
 }
