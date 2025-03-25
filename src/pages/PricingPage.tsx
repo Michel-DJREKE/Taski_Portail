@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Pricing from "@/components/home/PricingOld";
 
 const PricingPage = () => {
   return (
@@ -22,7 +21,6 @@ const PricingPage = () => {
             </p>
           </div>
         </div>
-        <Pricing />
       </main>
       <Footer />
     </div>

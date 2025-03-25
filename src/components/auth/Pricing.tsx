@@ -217,7 +217,7 @@ const Pricing = () => {
                 <Button 
                   variant={plan.buttonVariant} 
 
-                  className="w-full bg-taski-primary hover:bg-green-800"
+                  className="w-full bg-taski-primary hover:bg-green-800 text-taski-light"
                   asChild
                 >
                   <Link to="/auth">
@@ -229,38 +229,7 @@ const Pricing = () => {
           ))}
         </motion.div>
         
-        <div className="max-w-3xl mx-auto">
-          <motion.div 
-            className="bg-card border border-border rounded-2xl p-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <h2 className="text-2xl font-bold mb-6">Questions fréquentes</h2>
-            
-            <div className="space-y-6">
-              <div className="faq-item pb-6">
-                <h3 className="font-medium mb-2">Puis-je changer de forfait à tout moment ?</h3>
-                <p className="text-foreground/70 text-sm">Oui, vous pouvez passer d'un forfait à l'autre à tout moment. Si vous passez à un forfait supérieur, la différence sera calculée au prorata. Si vous passez à un forfait inférieur, le changement prendra effet à la fin de votre période de facturation actuelle.</p>
-              </div>
-              
-              <div className="faq-item pb-6">
-                <h3 className="font-medium mb-2">Comment fonctionne la facturation annuelle ?</h3>
-                <p className="text-foreground/70 text-sm">Avec la facturation annuelle, vous payez pour une année complète à l'avance et bénéficiez d'une remise de 16% par rapport au prix mensuel. Le montant est débité en une seule fois au début de votre période de facturation.</p>
-              </div>
-              
-              <div className="faq-item pb-6">
-                <h3 className="font-medium mb-2">Quelle méthode de paiement acceptez-vous ?</h3>
-                <p className="text-foreground/70 text-sm">Nous acceptons les cartes de crédit (Visa, Mastercard, American Express), les virements bancaires et les paiements via Mobile Money pour les clients en Afrique.</p>
-              </div>
-              
-              <div className="faq-item">
-                <h3 className="font-medium mb-2">Y a-t-il une garantie de remboursement ?</h3>
-                <p className="text-foreground/70 text-sm">Oui, nous offrons une garantie de remboursement de 14 jours. Si vous n'êtes pas satisfait du service pendant cette période, vous pouvez demander un remboursement complet.</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+
       </div>
   );
 };
