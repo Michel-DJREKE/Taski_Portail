@@ -1,0 +1,158 @@
+
+{
+    "nav": {
+      "home": "Accueil",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "login": "Connexion",
+      "register": "Commencer gratuitement"
+    },
+    "hero": {
+      "title": "Simplifiez votre gestion de tâches et de projets",
+      "subtitle": "TASKI vous aide à organiser vos projets, suivre votre progression et collaborer efficacement avec votre équipe.",
+      "cta": "Commencer gratuitement",
+      "secondary": "En savoir plus"
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "subtitle": "Tout ce dont vous avez besoin pour réussir vos projets"
+    },
+    "pricing": {
+      "title": "Plans et tarification",
+      "subtitle": "Choisissez le plan qui convient le mieux à vos besoins et commencez à optimiser votre productivité dès aujourd'hui."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Trouvez rapidement des réponses à vos questions sur TASKI et découvrez comment notre plateforme peut vous aider à optimiser votre productivité."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Nous sommes à votre écoute. N'hésitez pas à nous contacter pour toute question ou suggestion."
+    },
+    "cta": {
+      "title": "Transformez la façon dont votre équipe travaille dès aujourd'hui",
+      "subtitle": "Rejoignez des milliers d'équipes qui utilisent TASKI pour améliorer leur productivité et atteindre leurs objectifs plus rapidement.",
+      "primary": "Commencer gratuitement",
+      "secondary": "Contacter les ventes",
+      "ready": "Prêt à commencer ?",
+      "free_trial": "Essai gratuit de 14 jours",
+      "no_commitment": "Sans engagement",
+      "responsive_support": "Support réactif"
+    },
+    "footer": {
+      "rights": "Tous droits réservés",
+      "product": "Produit",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "enterprise": "Entreprise",
+      "updates": "Mises à jour",
+      "resources": "Ressources",
+      "blog": "Blog",
+      "guides": "Guides",
+      "support": "Support",
+      "help_center": "Centre d'aide",
+      "company": "Entreprise",
+      "about": "À propos",
+      "careers": "Carrières",
+      "partners": "Partenaires",
+      "contact_us": "Contactez-nous",
+      "legal": "Juridique",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "security": "Sécurité",
+      "compliance": "Conformité",
+      "description": "TASKI est une plateforme intuitive de gestion de tâches et de projets qui aide les équipes à rester organisées et productives."
+    },
+    "language": {
+      "fr": "Français",
+      "en": "Anglais"
+    },
+    "auth": {
+      "login": "Connexion",
+      "register": "Inscription",
+      "forgotPassword": "Mot de passe oublié",
+      "login_title": "Connectez-vous à votre compte",
+      "register_title": "Créez votre compte",
+      "forgot_password_title": "Récupérez votre mot de passe",
+      "login_description": "Entrez vos identifiants pour accéder à votre espace TASKI",
+      "register_description": "Commencez gratuitement et découvrez la puissance de TASKI",
+      "forgot_password_description": "Nous vous enverrons un lien pour réinitialiser votre mot de passe",
+      "login_motivation": "Reprenez votre productivité en main !",
+      "register_motivation": "Rejoignez une meilleure façon de gérer vos projets !",
+      "forgot_password_motivation": "Ne vous inquiétez pas, récupérez votre accès en un instant !",
+      "name": "Nom complet",
+      "name_placeholder": "Entrez votre nom",
+      "email": "Adresse email",
+      "email_placeholder": "Entrez votre email",
+      "password": "Mot de passe",
+      "password_placeholder_login": "Entrez votre mot de passe",
+      "password_placeholder_register": "Créez un mot de passe",
+      "forgot_password_link": "Mot de passe oublié ?",
+      "hide_password": "Masquer le mot de passe",
+      "show_password": "Afficher le mot de passe",
+      "terms_prefix": "En créant un compte, vous acceptez nos",
+      "terms_link": "Conditions d'utilisation",
+      "terms_and": "et notre",
+      "privacy_link": "Politique de confidentialité",
+      "login_button": "Se connecter",
+      "register_button": "S'inscrire",
+      "reset_link_button": "Envoyer le lien de récupération",
+      "or": "ou",
+      "continue_with_google": "Continuer avec Google",
+      "continue_with_github": "Continuer avec GitHub",
+      "no_account": "Vous n'avez pas de compte ?",
+      "create_account": "Créer un compte",
+      "have_account": "Vous avez déjà un compte ?",
+      "login_link": "Se connecter",
+      "back_to_login": "Retour à la connexion"
+    },
+    "notFound": {
+      "title": "404",
+      "message": "Oups ! Page non trouvée",
+      "returnHome": "Retour à l'accueil"
+    },
+    "pricing_plans": {
+      "free": {
+        "name": "Gratuit",
+        "description": "Parfait pour débuter avec la gestion de tâches",
+        "features": [
+          "Gestion de tâches basique",
+          "Collaboration avec 3 membres",
+          "Stockage limité",
+          "1 projet actif"
+        ],
+        "cta": "Commencer gratuitement"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Toutes les fonctionnalités pour les équipes productives",
+        "features": [
+          "Toutes les fonctionnalités avancées",
+          "Collaboration illimitée",
+          "Stockage augmenté",
+          "Accès aux statistiques détaillées",
+          "Intégrations essentielles",
+          "Projets illimités"
+        ],
+        "cta": "Commencer l'essai gratuit"
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "description": "Solution complète pour les grandes organisations",
+        "features": [
+          "Personnalisation avancée",
+          "Support prioritaire",
+          "Sécurité renforcée",
+          "Intégration avec outils tiers",
+          "API dédiée",
+          "Déploiement sur site disponible"
+        ],
+        "cta": "Contacter les ventes"
+      },
+      "recommended": "Recommandé",
+      "contactUs": "Des besoins spécifiques ? Contactez-nous pour une offre personnalisée."
+    }
+  }
+  

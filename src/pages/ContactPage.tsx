@@ -3,8 +3,9 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Contact from '@/components/home/Contact';
-
+import { useTranslation } from 'react-i18next';
 const ContactPage = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

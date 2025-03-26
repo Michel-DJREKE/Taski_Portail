@@ -1,0 +1,158 @@
+
+{
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "login": "Login",
+      "register": "Start for free"
+    },
+    "hero": {
+      "title": "Simplify your task and project management",
+      "subtitle": "TASKI helps you organize your projects, track your progress, and collaborate effectively with your team.",
+      "cta": "Start for free",
+      "secondary": "Learn more"
+    },
+    "features": {
+      "title": "Features",
+      "subtitle": "Everything you need to succeed in your projects"
+    },
+    "pricing": {
+      "title": "Plans and pricing",
+      "subtitle": "Choose the plan that best suits your needs and start optimizing your productivity today."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Quickly find answers to your questions about TASKI and discover how our platform can help you optimize your productivity."
+    },
+    "contact": {
+      "title": "Contact us",
+      "subtitle": "We're listening. Feel free to contact us with any questions or suggestions."
+    },
+    "cta": {
+      "title": "Transform the way your team works today",
+      "subtitle": "Join thousands of teams using TASKI to improve their productivity and achieve their goals faster.",
+      "primary": "Start for free",
+      "secondary": "Contact sales",
+      "ready": "Ready to start?",
+      "free_trial": "14-day free trial",
+      "no_commitment": "No commitment",
+      "responsive_support": "Responsive support"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "enterprise": "Enterprise",
+      "updates": "Updates",
+      "resources": "Resources",
+      "blog": "Blog",
+      "guides": "Guides",
+      "support": "Support",
+      "help_center": "Help Center",
+      "company": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "partners": "Partners",
+      "contact_us": "Contact us",
+      "legal": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "security": "Security",
+      "compliance": "Compliance",
+      "description": "TASKI is an intuitive task and project management platform that helps teams stay organized and productive."
+    },
+    "language": {
+      "fr": "French",
+      "en": "English"
+    },
+    "auth": {
+      "login": "Login",
+      "register": "Register",
+      "forgotPassword": "Forgot Password",
+      "login_title": "Log in to your account",
+      "register_title": "Create your account",
+      "forgot_password_title": "Recover your password",
+      "login_description": "Enter your credentials to access your TASKI workspace",
+      "register_description": "Start for free and discover the power of TASKI",
+      "forgot_password_description": "We'll send you a link to reset your password",
+      "login_motivation": "Take control of your productivity!",
+      "register_motivation": "Join a better way to manage your projects!",
+      "forgot_password_motivation": "Don't worry, recover your access in an instant!",
+      "name": "Full name",
+      "name_placeholder": "Enter your name",
+      "email": "Email address",
+      "email_placeholder": "Enter your email",
+      "password": "Password",
+      "password_placeholder_login": "Enter your password",
+      "password_placeholder_register": "Create a password",
+      "forgot_password_link": "Forgot password?",
+      "hide_password": "Hide password",
+      "show_password": "Show password",
+      "terms_prefix": "By creating an account, you agree to our",
+      "terms_link": "Terms of Service",
+      "terms_and": "and",
+      "privacy_link": "Privacy Policy",
+      "login_button": "Log in",
+      "register_button": "Sign up",
+      "reset_link_button": "Send recovery link",
+      "or": "or",
+      "continue_with_google": "Continue with Google",
+      "continue_with_github": "Continue with GitHub",
+      "no_account": "Don't have an account?",
+      "create_account": "Create an account",
+      "have_account": "Already have an account?",
+      "login_link": "Log in",
+      "back_to_login": "Back to login"
+    },
+    "notFound": {
+      "title": "404",
+      "message": "Oops! Page not found",
+      "returnHome": "Return to Home"
+    },
+    "pricing_plans": {
+      "free": {
+        "name": "Free",
+        "description": "Perfect for getting started with task management",
+        "features": [
+          "Basic task management",
+          "Collaboration with 3 members",
+          "Limited storage",
+          "1 active project"
+        ],
+        "cta": "Start for free"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "All features for productive teams",
+        "features": [
+          "All advanced features",
+          "Unlimited collaboration",
+          "Increased storage",
+          "Access to detailed statistics",
+          "Essential integrations",
+          "Unlimited projects"
+        ],
+        "cta": "Start free trial"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Complete solution for large organizations",
+        "features": [
+          "Advanced customization",
+          "Priority support",
+          "Enhanced security",
+          "Integration with third-party tools",
+          "Dedicated API",
+          "On-premise deployment available"
+        ],
+        "cta": "Contact sales"
+      },
+      "recommended": "Recommended",
+      "contactUs": "Have specific needs? Contact us for a custom offer."
+    }
+  }
+  

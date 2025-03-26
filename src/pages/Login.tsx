@@ -2,7 +2,10 @@
 import React from 'react';
 import AuthForm from '@/components/auth/AuthForm';
 
+import { useTranslation } from 'react-i18next';
 const Login = () => {
+  
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-taski-light dark:bg-taski-dark px-4">
       {/* Background bubbles */}

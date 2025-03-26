@@ -1,7 +1,10 @@
 import { Sparkles } from "lucide-react";
 import React from "react";
 
+import { useTranslation } from 'react-i18next';
 const PricingNew = () => {
+  
+  const { t } = useTranslation();
   return (
     <div>
       <section>

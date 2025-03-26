@@ -2,7 +2,9 @@
 import React from 'react';
 import { Activity, Users, Clock, CheckCircle, PanelRight, Calendar, Bell, Star } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
 const Features = () => {
+  const { t } = useTranslation();
   const features = [
     {
       icon: <Activity size={24} className="text-taski-primary" />,

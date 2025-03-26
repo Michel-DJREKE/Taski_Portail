@@ -2,41 +2,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { ChevronDown } from 'lucide-react';
-
-const faqItems = [
-  {
-    question: "Comment commencer avec TASKI ?",
-    answer: "Créez simplement un compte gratuit en quelques secondes, puis suivez notre guide de démarrage rapide pour configurer votre premier projet et inviter votre équipe."
-  },
-  {
-    question: "Quelles sont les limites du plan gratuit ?",
-    answer: "Le plan gratuit vous permet de gérer jusqu'à 3 membres dans votre équipe, avec un nombre limité de projets actifs et un stockage de base. C'est parfait pour les petites équipes ou pour tester notre plateforme."
-  },
-  {
-    question: "Puis-je changer de plan à tout moment ?",
-    answer: "Oui, vous pouvez facilement passer d'un plan à l'autre à tout moment. Si vous passez à un plan supérieur, vous serez facturé au prorata. Si vous passez à un plan inférieur, le changement prendra effet à la prochaine période de facturation."
-  },
-  {
-    question: "Comment fonctionne la collaboration en équipe ?",
-    answer: "TASKI permet à tous les membres de votre équipe de voir les tâches en temps réel, d'assigner des responsabilités, de commenter et de partager des fichiers. Vous pouvez également définir différents niveaux d'autorisations selon les rôles de chacun."
-  },
-  {
-    question: "Est-ce que TASKI propose des intégrations avec d'autres outils ?",
-    answer: "Oui, TASKI s'intègre avec de nombreux outils populaires comme Google Drive, Slack, GitHub, et bien d'autres. Les intégrations avancées sont disponibles dans nos plans Premium et Entreprise."
-  },
-  {
-    question: "Comment contacter le support client ?",
-    answer: "Vous pouvez contacter notre équipe de support via le formulaire de contact sur notre site, par email à support@taski.com, ou directement depuis l'application via le chat intégré pour les clients Premium et Entreprise."
-  },
-];
-
 const FAQ = () => {
+  const { t } = useTranslation();
+  const faqItems = [
+    {
+      question: "Comment commencer avec TASKI ?",
+      answer: "Créez simplement un compte gratuit en quelques secondes, puis suivez notre guide de démarrage rapide pour configurer votre premier projet et inviter votre équipe."
+    },
+    {
+      question: "Quelles sont les limites du plan gratuit ?",
+      answer: "Le plan gratuit vous permet de gérer jusqu'à 3 membres dans votre équipe, avec un nombre limité de projets actifs et un stockage de base. C'est parfait pour les petites équipes ou pour tester notre plateforme."
+    },
+    {
+      question: "Puis-je changer de plan à tout moment ?",
+      answer: "Oui, vous pouvez facilement passer d'un plan à l'autre à tout moment. Si vous passez à un plan supérieur, vous serez facturé au prorata. Si vous passez à un plan inférieur, le changement prendra effet à la prochaine période de facturation."
+    },
+    {
+      question: "Comment fonctionne la collaboration en équipe ?",
+      answer: "TASKI permet à tous les membres de votre équipe de voir les tâches en temps réel, d'assigner des responsabilités, de commenter et de partager des fichiers. Vous pouvez également définir différents niveaux d'autorisations selon les rôles de chacun."
+    },
+    {
+      question: "Est-ce que TASKI propose des intégrations avec d'autres outils ?",
+      answer: "Oui, TASKI s'intègre avec de nombreux outils populaires comme Google Drive, Slack, GitHub, et bien d'autres. Les intégrations avancées sont disponibles dans nos plans Premium et Entreprise."
+    },
+    {
+      question: "Comment contacter le support client ?",
+      answer: "Vous pouvez contacter notre équipe de support via le formulaire de contact sur notre site, par email à support@taski.com, ou directement depuis l'application via le chat intégré pour les clients Premium et Entreprise."
+    },
+  ];
+
+ 
   return (
     <section id="faq" className="py-24 bg-taski-light dark:bg-taski-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

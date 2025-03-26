@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import { useTranslation } from 'react-i18next';
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative pt-32 pb-20 overflow-hidden bg-hero-gradient dark:bg-hero-gradient-dark">
       {/* Decoration bubbles */}

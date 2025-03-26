@@ -4,11 +4,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from '@/components/ui/theme-toggle';
+import LanguageSwitcher from '@/components/ui/language-switcher';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +70,7 @@ const Navbar = () => {
 
           {/* Auth Buttons & Theme Toggle (Desktop) */}
           <div className="hidden md:flex items-center space-x-4">
+          <LanguageSwitcher />
             <ThemeToggle />
             
             <Link to="/login">
@@ -83,6 +87,7 @@ const Navbar = () => {
 
           {/* Mobile Menu & Theme Toggle Button */}
           <div className="flex items-center space-x-2 md:hidden ">
+           <LanguageSwitcher />
             <ThemeToggle  />
             
             <button 

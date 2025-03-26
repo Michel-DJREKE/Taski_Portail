@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
 const CallToAction = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-taski-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
